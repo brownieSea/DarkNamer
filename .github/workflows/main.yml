@@ -18,7 +18,6 @@ jobs:
 
       - name: 빌드
         shell: cmd
-        working-directory: src
         run: |
           rc /nologo /l 0x412 /d NDEBUG /d _UNICODE /d UNICODE /fo DarkNamer.res DarkNamer.rc
           if errorlevel 1 exit /b 1
@@ -31,4 +30,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: DarkNamer
-          path: src/DarkNamer.exe
+          path: DarkNamer.exe
